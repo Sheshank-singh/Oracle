@@ -13,7 +13,7 @@ A mystical AI chatbot that speaks in riddles and cryptic messages. Users must fi
 ## Prerequisites
 
 - Python 3.8 or higher
-- OpenAI API key
+- Mistral AI API key
 
 ## Installation
 
@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 4. Create a `.env` file in the project root and add your OpenAI API key:
 ```
-OPENAI_API_KEY=your_api_key_here
+MISTRAL_API_KEY=your_api_key_here
 ```
 
 ## Running the Application
