@@ -22,6 +22,14 @@ RIDDLES = [
     {
         "riddle": "I am sharp, I am strong, In battle, I belong. Swing me fast, swing me true, Victory may come to you. What am I?",
         "answer": "sword" or "SWORD" or "Sword"
+    },
+    {
+        "riddle": "I open, I close, but I’m not a chest, Through me, all must make their quest. Guarded well, both night and day, Find the key, and pass away. What am I?",
+        "answer": "door" or "DOOR" or "Door" or "gate" or "GATE" or "Gate"
+    },
+    {
+        "riddle": "Round and shiny, fit for kings, Wealth and power, I do bring. Many seek me, few succeed, For I am a symbol of greed. What am I?",
+        "answer": "gold coin" or "GOLD COIN" or "Gold Coin"
     }
 ]
 
