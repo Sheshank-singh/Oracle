@@ -139,12 +139,12 @@ def oracle_response():
                 return jsonify({
                     "response": f"A temple of knowledge, standing beyond your time—a place where those who wield magic of the mind store their records. {PROGRESSIVE_HINTS['where'].get(interaction_count, PROGRESSIVE_HINTS['where'][3])}"
                 })
-        elif any(phrase in user_message.lower() for phrase in ["which site", "which website", "which url", "which link",'which archive','which portal','which hall','which hall of learning','get link',]):
+        elif any(phrase in user_message.lower() for phrase in ["which site", "which website", "which url", "which link",'which archive','which portal','which hall','which hall of learning','get link','g']):
             # return jsonify({
             #     "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://csi.vit.edu.in/ {PROGRESSIVE_HINTS['which_site'].get(interaction_count, PROGRESSIVE_HINTS['which_site'][3])}"
             # })
             return jsonify({
-                "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://prachi5791.github.io/CSI_PastWorld/ "
+                "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://csi.vit.edu.in/ "
             })
         elif is_confused:
             return jsonify({
