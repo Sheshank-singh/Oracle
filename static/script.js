@@ -286,6 +286,16 @@ style.textContent = `
         from { background-color: #4a0000; }
         to { background-color: var(--primary-color); }
     }
+    
+    @keyframes fadeToGold {
+        from { background-color: var(--primary-color); }
+        to { background-color: #2a1f00; }
+    }
+    
+    .victorious {
+        border: 2px solid gold;
+        box-shadow: 0 0 20px gold;
+    }
 `;
 document.head.appendChild(style);
 

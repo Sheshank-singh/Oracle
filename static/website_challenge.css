@@ -1,0 +1,60 @@
+.website-hint {
+    background: rgba(44, 17, 85, 0.4) !important;
+    border: 2px solid #9b6dff !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+    font-size: 1.1em !important;
+    line-height: 1.5 !important;
+    color: #e0c3ff !important;
+    text-shadow: 0 0 10px #9b6dff !important;
+    animation: glowHint 2s infinite alternate !important;
+}
+
+@keyframes glowHint {
+    from {
+        box-shadow: 0 0 10px rgba(155, 109, 255, 0.3);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(155, 109, 255, 0.5), 0 0 30px rgba(106, 27, 154, 0.3);
+    }
+}
+
+/* Style input when waiting for password */
+input[type="text"][placeholder="Enter the sacred code..."] {
+    background: rgba(44, 17, 85, 0.2) !important;
+    border: 2px solid #9b6dff !important;
+    color: #e0c3ff !important;
+    animation: pulseBorder 2s infinite alternate !important;
+}
+
+@keyframes pulseBorder {
+    from {
+        border-color: #9b6dff;
+        box-shadow: 0 0 10px rgba(155, 109, 255, 0.3);
+    }
+    to {
+        border-color: #b794ff;
+        box-shadow: 0 0 20px rgba(155, 109, 255, 0.5);
+    }
+}
+
+.message.oracle-message.correct-answer {
+    background: rgba(17, 85, 44, 0.4) !important;
+    border: 2px solid #6dff9b !important;
+    animation: victoryPulse 2s infinite alternate !important;
+}
+
+@keyframes victoryPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(109, 255, 155, 0.3);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(109, 255, 155, 0.7), 0 0 50px rgba(27, 154, 106, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(109, 255, 155, 0.3);
+    }
+} 
