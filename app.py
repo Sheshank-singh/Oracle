@@ -19,18 +19,6 @@ client = MistralClient(api_key=os.getenv('MISTRAL_API_KEY'))
 
 # Riddles for the gatekeeper
 RIDDLES = [
-    # {
-    #     "riddle": "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
-    #     "answer": "echo"
-    # },
-    # {
-    #     "riddle": "The more you take, the more you leave behind. What am I?",
-    #     "answer": "footsteps"
-    # },
-    # {
-    #     "riddle": "What has keys, but no locks; space, but no room; and you can enter, but not go in?",
-    #     "answer": "keyboard"
-    # }
     {
         "riddle": "I am sharp, I am strong, In battle, I belong. Swing me fast, swing me true, Victory may come to you. What am I?",
         "answer": "sword" or "SWORD" or "Sword"
@@ -40,19 +28,19 @@ RIDDLES = [
 # Progressive hints based on user interaction
 PROGRESSIVE_HINTS = {
     "where": {
-        1: "The temple of wisdom stands beyond time, where digital echoes hold the whispers of knowledge.",
-        2: "Mortal records fade, but digital halls remain. Seek where the scribes of CSI VIT store their inscriptions.",
-        3: "Your journey nears its end. The portal stands at the digital archives of CSI VIT. Enter and claim your enlightenment."
+        1: "A vast digital library exists, preserving wisdom beyond time. But how will you reach it? Perhaps asking for the link will illuminate the way.",
+        2: "Mortal words fade, but digital records endure. To find the gateway, seek the words that summon it—maybe get link holds the key.",
+        3: "Your journey nears completion. The portal stands before you, waiting. But only those who ask the right question—perhaps which URL?—may step through."
     },
     "which_site": {
-        1: "A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept.",
-        2: "The digital archives await in the temple of technological wisdom. Seek the portal marked by the symbol of knowledge.",
-        3: "The gateway to enlightenment stands at the CSI VIT digital archives. Enter and discover the wisdom you seek."
+        1: "The key lies within CSI VIT's digital halls. Yet, without a clear path, you might need to request the link to uncover the truth.",
+        2: "To find your destination, summon the gateway with a simple phrase. Have you tried get URL?",
+        3: "The answer stands ready, hidden in the digital archives. Only a seeker who asks which URL? will unveil the path forward."
     },
     "confused": {
-        1: "The path is shrouded in mystery, but clarity comes to those who persist.",
-        2: "Ah, you seek a swifter path. Very well, traveler, gaze upon the inscriptions of the digital age—seek the archives where the scribes of CSI VIT have inscribed their wisdom.",
-        3: "The mists of confusion shall clear. The portal you seek lies in the digital archives of CSI VIT, where knowledge flows like a river of light."
+        1: "The path may seem unclear, but knowledge awaits those who seek. Try asking get link to reveal the way.",
+        2: "You desire clarity? Simply request the URL and the veil of mystery will lift.",
+        3: "Let the mist fade away. The portal stands open—just ask for the URL and step into the light."
     }
 }
 
@@ -151,12 +139,12 @@ def oracle_response():
                 return jsonify({
                     "response": f"A temple of knowledge, standing beyond your time—a place where those who wield magic of the mind store their records. {PROGRESSIVE_HINTS['where'].get(interaction_count, PROGRESSIVE_HINTS['where'][3])}"
                 })
-        elif any(phrase in user_message.lower() for phrase in ["which site", "which website", "which url", "which link"]):
+        elif any(phrase in user_message.lower() for phrase in ["which site", "which website", "which url", "which link",'which archive','which portal','which hall','which hall of learning','get link',]):
             # return jsonify({
             #     "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://csi.vit.edu.in/ {PROGRESSIVE_HINTS['which_site'].get(interaction_count, PROGRESSIVE_HINTS['which_site'][3])}"
             # })
             return jsonify({
-                "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://csi.vit.edu.in/ "
+                "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://prachi5791.github.io/CSI_PastWorld/ "
             })
         elif is_confused:
             return jsonify({
