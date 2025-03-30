@@ -1,6 +1,6 @@
 // Website Challenge Handler
 let isWaitingForPassword = false;
-const CORRECT_PASSWORD = 'hidden_treasure_123';
+const CORRECT_PASSWORD = 'wisdom_is_earned_not_given';
 
 // Create victory sound
 function playVictorySound() {
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mutations.forEach((mutation) => {
             mutation.addedNodes.forEach((node) => {
                 if (node.classList && node.classList.contains('oracle-message')) {
-                    if (node.textContent.includes('csi.vit.edu.in')) {
+                    if (node.textContent.includes('prachi5791.github.io/CSI_Oracle')) {
                         setTimeout(() => {
                             const hintMessage = document.createElement('div');
                             hintMessage.className = 'message oracle-message website-hint';

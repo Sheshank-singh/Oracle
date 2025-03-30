@@ -141,10 +141,10 @@ def oracle_response():
                 })
         elif any(phrase in user_message.lower() for phrase in ["which site", "which website", "which url", "which link",'which archive','which portal','which hall','which hall of learning','get link','g']):
             # return jsonify({
-            #     "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://csi.vit.edu.in/ {PROGRESSIVE_HINTS['which_site'].get(interaction_count, PROGRESSIVE_HINTS['which_site'][3])}"
+            #     "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://prachi5791.github.io/CSI_Oracle/ {PROGRESSIVE_HINTS['which_site'].get(interaction_count, PROGRESSIVE_HINTS['which_site'][3])}"
             # })
             return jsonify({
-                "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://csi.vit.edu.in/ "
+                "response": f"A tome exists in the great hall of CSI VIT. My name marks the chamber where the truth is kept. https://prachi5791.github.io/CSI_Oracle/ "
             })
         elif is_confused:
             return jsonify({
